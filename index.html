@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MagicTryOn: Harnessing Diffusion Transformer for Garment-Preserving Video Virtual Try-on.">
-  <meta name="keywords" content="Video Virtual Try-on, Diffusion Transformer">
+        content="Realism Control One-step Diffusion for Real-World Image Super-Resolution">
+  <meta name="keywords" content="Real-World Image Super-Resolution, One-step Diffusion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MagicTryOn: Harnessing Diffusion Transformer for Garment-Preserving Video Virtual Try-on</title>
+  <title>Realism Control One-step Diffusion for Real-World Image Super-Resolution</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/tryon/tryon_icon_2.png">
+  <link rel="icon" href="./static/images/SR/diff_time_step_principle_01.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -50,51 +50,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <!-- <h1 class="title is-1 publication-title" style="display: flex; align-items: baseline;">
-            <img src="./static/images/tryon/tryon_icon_2.png" alt="MagicTryOn Icon" style="width: 2em; height: 2em; vertical-align: baseline; margin-right: -1.9em;">
-            MagicTryOn: Harnessing Diffusion Transformer for Garment-Preserving Video Virtual Try-on
-          </h1> -->
-          <h1 class="title is-1 publication-title">MagicTryOn: Harnessing Diffusion Transformer for Garment-Preserving Video Virtual Try-on</h1>
+          <h1 class="title is-1 publication-title">Realism Control One-step Diffusion for Real-World Image Super-Resolution</h1>
+          
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=-AHPok4AAAAJ&hl=zh-CN">Guangyuan Li</a><sup>1,2&dagger;</sup>,</span>
-            <span class="author-block">
-              <a href="">Siming Zheng</a><sup>2&dagger;</sup>,</span>
-            <span class="author-block">
-              <a href="">Hao Zhang</a><sup>2</sup>,
+              <a href="mhttps://scholar.google.com/citations?user=fiylCeQAAAAJ">Zongliang Wu</a><sup>1, 2, 3, *</sup>,
             </span>
             <span class="author-block">
-              <a href="">Jinwei Chen</a><sup>2</sup>,
+              <a href="https://scholar.google.com/citations?user=zfYLLggAAAAJ">Siming Zheng</a><sup>3, *</sup>,
             </span>
             <span class="author-block">
-              <a href="">Junsheng Luan</a><sup>1</sup>,
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=85QJ_i4AAAAJ">Peng-Tao Jiang</a><sup>3, #</sup>,
             </span>
             <span class="author-block">
-              <a href="">Binkai Ou</a><sup>3</sup>
-            </span><br>
-            <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=KKBFG6kAAAAJ">Lei Zhao</a><sup>1*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Bo Li</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=85QJ_i4AAAAJ">Peng-Tao Jiang</a><sup>2*</sup>
+              <a href="https://scholar.google.com/citations?hl=en&user=cS9CbWkAAAAJ">Xin Yuan</a><sup>2, #</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>College of Computer Science and Technology, Zhejiang University</span><br>
-            <span class="author-block"><sup>2</sup>vivo Mobile Communication Co., Ltd</span><br>
-            <span class="author-block"><sup>3</sup>Innovation Research & Development, BoardWare Information System Limited</span><br>
-            <span class="author-block"><sup>&dagger; These authors contributed equally, * Corresponding authors</sup></span>
+            <span class="author-block"><sup>1</sup> Zhejiang University, Hangzhou, China</span><br>
+            <span class="author-block"><sup>2</sup> School of Engineering, Westlake University, Hangzhou, China</span><br>
+            <span class="author-block"><sup>3</sup> vivo Mobile Communication Co., Ltd</span><br>
+            <span class="author-block"><sup>*</sup> Equal Contribution, <sup>#</sup> Corresponding Author</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href=""
+                            <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.10122"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -103,7 +86,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2509.10122"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -111,19 +94,8 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
+                            <span class="link-block">
+                <a href="https://github.com/Zongliang-Wu/RCOD"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -131,15 +103,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
 
           </div>
@@ -166,305 +129,91 @@
 </section> -->
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivo_01.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivo_02.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid01.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid02.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid03.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid04.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid05.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/vivid06.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video5.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video7.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video6.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/project_page_video8.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video Virtual Try-On (VVT) aims to simulate the natural appearance of garments across consecutive video frames, capturing their dynamic variations and interactions with human body motion. However, current VVT methods still face challenges in terms of spatiotemporal consistency and garment content preservation.
-            First, they use diffusion models based on the U-Net, which are limited in their expressive capability and struggle to reconstruct complex details. Second, they adopt a separative modeling approach for spatial and temporal attention, which hinders the effective capture of structural relationships and dynamic consistency across frames. Third, their expression of garment details remains insufficient, affecting the realism and stability of the overall synthesized results, especially during human motion. 
-            To address the above challenges, we propose <b>MagicTryOn</b>, a video virtual try-on framework built upon the large-scale video diffusion Transformer.
-            We replace the U-Net architecture with a diffusion Transformer and combine full self-attention to jointly model the spatiotemporal consistency of videos. 
-            We design a coarse-to-fine garment preservation strategy. 
-            The coarse strategy integrates garment tokens during the embedding stage, while the fine strategy incorporates multiple garment-based conditions, such as semantics, textures, and contour lines during the denoising stage.
-            Moreover, we introduce a mask-aware loss to further optimize garment region fidelity.
-            Extensive experiments on both image and video try-on datasets demonstrate that our method outperforms existing SOTA methods in comprehensive evaluations and generalizes to in-the-wild scenarios.
+            Pre-trained diffusion models have shown great potential in real-world image super-resolution (Real-ISR) tasks by enabling high-resolution reconstructions. While one-step diffusion (OSD) methods significantly improve efficiency compared to traditional multi-step approaches, they still have limitations in balancing fidelity and realism across diverse scenarios.
+            Since the OSDs for SR are usually trained or distilled by a single timestep, they lack flexible control mechanisms to adaptively prioritize these competing objectives, which are inherently manageable in multi-step methods through adjusting sampling steps. To address this challenge, we propose a **Realism Controlled One-step Diffusion (RCOD)** framework for Real-ISR. RCOD provides a latent domain grouping strategy that enables explicit control over fidelity-realism trade-offs during the noise prediction phase with minimal training paradigm modifications and original training data. A degradation-aware sampling strategy is also introduced to align distillation regularization with the grouping strategy and enhance the controlling of trade-offs.
+            Moreover, a visual prompt injection module is used to replace conventional text prompts with degradation-aware visual tokens, enhancing both restoration accuracy and semantic consistency.
+            Our method achieves superior fidelity and perceptual quality while maintaining computational efficiency. Extensive experiments demonstrate that RCOD outperforms state-of-the-art OSD methods quantitatively and visually, with flexible realism control capabilities in the inference stage.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-    
-        <!-- 图片指令 -->
-        <img src="./static/images/tryon/Fig_model.png" alt="Description of image" style="max-width: 100%; height: auto;">
-    
-        <!-- p标签指令 -->
-        <div class="content has-text-justified">
-        <p>
-          The overall pipeline of MagicTryOn. 
-          The input includes person videos, pose representations, clothing-agnostic masks, and target garment images. 
-          Videos and poses are encoded into agnostic and pose latents by the Wan Video Encoder, while masks are resized into mask latents. 
-          These, combined with random noise, are fed into the DiT backbone. Meanwhile, garment images yield multi-level features, including text, CLIP, garment, and line tokens. 
-          The garment token provides coarse guidance via sequence concatenation, and all tokens are injected into DiT blocks for fine-grained conditioning. 
-          After <i>n</i> denoising steps, the DiT backbone produces try-on latents, decoded into video by the Wan Video Decoder.
-        </p>
       </div>
-    
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
     <div style="text-align: center;">
-      <h2 class="title is-3">Experiments</h2>
+<!--       <h2 class="title is-3">Visual Results</h2> -->
       <br>
-  </div>
-    
-    <div class="columns is-centered">
-      
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/dance01.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/tryon/dance02.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-    <div class="content has-text-justified">
-      <p>
-        Try-on results in large motion scenarios. 
-        Virtual try-on with large body movements—such as dancing—is particularly challenging, as it requires not only garment consistency but also spatiotemporal coherence. 
-        To evaluate performance in such cases, we select two dancing videos from Pexels website.
-      </p>
     </div>
 
-    <!-- multi-garment scenario -->
-    <div class="columns is-centered">
-      
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tryon/m2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/tryon/m1.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-    <div class="content has-text-justified">
-      <p>
-        Try-on results in the multi-garment scenario.
-      </p>
-    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h3 class="title is-4">Fidelity-Realism Trade-off Control</h3> -->
+                <img src="./static/images/SR/diff_time_step_principle_01.png" alt="Comparison of RCOD with S3Diff showing control over fidelity and realism." style="max-width: 100%; height: auto;">
         
-    <!-- labubu -->
-    <div class="columns is-centered">
-      
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <img src="./static/images/tryon/labubu_01.jpg" alt="Description of image" style="max-width: 100%; height: auto;">
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/tryon/labubu_02.jpg" alt="Description of image" style="max-width: 100%; height: auto;">
-          </div>
-
+        <div class="content has-text-justified">
+          <p>
+           Fig. 1 Realism control one-step diffusion (RCOD) training process. The left part illustrates several synthesized real-world LR images by applying diverse degradations with varying types and intensities on an HR image. (a) Existing vanilla one-step diffusion (OSD) methods for super-resolution (SR): These LR images are directly sent into the diffusion forward and reverse process; the denoising U-Net tends to learn to recover the `average' degradation, leading to a monotonous generation ability within the latent domain. (b) Our proposed Realism Control One-Step Diffusion employs a latent domain grouping strategy. This allows for adaptive control of timesteps (denoising degrees) during the forward process according to the degradation degree in the latent domain. As a result, the denoising U-Net can acquire a more diverse generation capability based on the timestep.          </p>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-    <div class="content has-text-justified">
-      <p>
-        Try-on results in the doll scenario.
-      </p>
-    </div>
+    <br><br>
+  
+</section>
 
 
-    <!-- 图片指令 -->
-    <img src="./static/images/tryon/image_result.png" alt="Description of image" style="max-width: 100%; height: auto;">
-    <div class="content has-text-justified">
-      <p>
-        Qualitative comparison of image virtual try-on results on the VITON-HD (1-st and 2-nd row) and DressCode (3-rd row) datasets.
-      </p>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div style="text-align: center;">
+      <h2 class="title is-3">Visual Results</h2>
+      <br>
     </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Fidelity-Realism Trade-off Control</h3>
+                <img src="./static/images/SR/fig1.png" alt="Comparison of RCOD with S3Diff showing control over fidelity and realism." style="max-width: 200%; height: auto;">
+        
+        <div class="content has-text-justified">
+          <p>
+            While previous one-step diffusion methods, such as S3Diff, only yield one optimal result, our approach offers the flexibility to control images with different fidelity-realism trade-offs during inference. For instance, our method can generate an image optimized for high **Fidelity (Ours-Fid.)** (PSNR: 26.94) or an image optimized for high **Realism (Ours-Real.)** (NIQE: 3.913), adapting to diverse user requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
     
-    
-      
-    <!--/ Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Qualitative Comparison</h3>
+        <img src="./static/images/SR/fig5.png" alt="Qualitative comparison of image Super-Resolution results on various datasets." style="max-width: 100%; height: auto;">
+        <div class="content has-text-justified">
+          <p>
+            Qualitative comparisons demonstrate that our method consistently achieves superior restoration accuracy and semantic consistency compared to state-of-the-art one-step diffusion methods.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-
 </section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <!-- <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre> -->
-  </div>
+      </div>
 </section>
 
 
@@ -475,7 +224,7 @@
          href="">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/GuangYuanKK" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/Zongliang-Wu/RCOD" class="external-link">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -489,7 +238,7 @@
           </p>
           <p>
             This means you are free to borrow the <a
-              href="https://github.com/vivoCameraResearch/magictryon">source code</a> of this website,
+              href="https://github.com/Zongliang-Wu/RCOD">source code</a> of this website,
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
@@ -502,3 +251,4 @@
 
 </body>
 </html>
+```
