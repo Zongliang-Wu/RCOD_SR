@@ -54,7 +54,7 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="mhttps://scholar.google.com/citations?user=fiylCeQAAAAJ">Zongliang Wu</a><sup>1, 2, 3, *</sup>,
+              <a href="https://scholar.google.com/citations?user=fiylCeQAAAAJ">Zongliang Wu</a><sup>1, 2, 3, *</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=zfYLLggAAAAJ">Siming Zheng</a><sup>3, *</sup>,
@@ -138,9 +138,9 @@
         <div class="content has-text-justified">
           <p>
             Pre-trained diffusion models have shown great potential in real-world image super-resolution (Real-ISR) tasks by enabling high-resolution reconstructions. While one-step diffusion (OSD) methods significantly improve efficiency compared to traditional multi-step approaches, they still have limitations in balancing fidelity and realism across diverse scenarios.
-            Since the OSDs for SR are usually trained or distilled by a single timestep, they lack flexible control mechanisms to adaptively prioritize these competing objectives, which are inherently manageable in multi-step methods through adjusting sampling steps. To address this challenge, we propose a **Realism Controlled One-step Diffusion (RCOD)** framework for Real-ISR. RCOD provides a latent domain grouping strategy that enables explicit control over fidelity-realism trade-offs during the noise prediction phase with minimal training paradigm modifications and original training data. A degradation-aware sampling strategy is also introduced to align distillation regularization with the grouping strategy and enhance the controlling of trade-offs.
+            Since the OSDs for SR are usually trained or distilled by a single timestep, they lack flexible control mechanisms to adaptively prioritize these competing objectives, which are inherently manageable in multi-step methods through adjusting sampling steps. To address this challenge, we propose a Realism Controlled One-step Diffusion (RCOD) framework for Real-ISR. RCOD provides a latent domain grouping strategy that enables explicit control over fidelity-realism trade-offs during the noise prediction phase with minimal training paradigm modifications and original training data. A degradation-aware sampling strategy is also introduced to align distillation regularization with the grouping strategy and enhance the trade-offs controlling.
             Moreover, a visual prompt injection module is used to replace conventional text prompts with degradation-aware visual tokens, enhancing both restoration accuracy and semantic consistency.
-            Our method achieves superior fidelity and perceptual quality while maintaining computational efficiency. Extensive experiments demonstrate that RCOD outperforms state-of-the-art OSD methods quantitatively and visually, with flexible realism control capabilities in the inference stage.
+            Our method achieves superior fidelity and perceptual quality while maintaining computational efficiency. Extensive experiments demonstrate that RCOD outperforms state-of-the-art OSD methods quantitatively and visually, with flexible realism control in the inference stage.
           </p>
         </div>
       </div>
@@ -153,7 +153,7 @@
   <div class="container is-max-desktop">
     <div style="text-align: center;">
 <!--       <h2 class="title is-3">Visual Results</h2> -->
-      <br>
+      <!-- <br> -->
     </div>
 
     <div class="columns is-centered has-text-centered">
@@ -167,7 +167,7 @@
         </div>
       </div>
     </div>
-    <br><br>
+    <!-- <br><br> -->
   
 </section>
 
@@ -184,25 +184,29 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-4">Fidelity-Realism Trade-off Control</h3>
-                <img src="./static/images/SR/fig1.png" alt="Comparison of RCOD with S3Diff showing control over fidelity and realism." style="max-width: 200%; height: auto;">
+                <img src="./static/images/SR/fig1.png" alt="Comparison of RCOD with S3Diff showing control over fidelity and realism." style="width: 100%; height: auto; object-fit: cover;">
         
         <div class="content has-text-justified">
-          <p>
-            While previous one-step diffusion methods, such as S3Diff, only yield one optimal result, our approach offers the flexibility to control images with different fidelity-realism trade-offs during inference. For instance, our method can generate an image optimized for high **Fidelity (Ours-Fid.)** (PSNR: 26.94) or an image optimized for high **Realism (Ours-Real.)** (NIQE: 3.913), adapting to diverse user requirements.
-          </p>
+          <!-- <p> -->
+                  <br>
+            Fig. 2 While previous one-step diffusion methods, such as S3Diff, only yield one optimal result, our approach offers the flexibility to control images with different fidelity-realism trade-offs during inference. For instance, our method can generate an image optimized for high Fidelity (Ours-Fid.) or an image optimized for high Realism (Ours-Real.), adapting to diverse user requirements.
+          <!-- </p> -->
+                 <br>
         </div>
       </div>
     </div>
-    <br><br>
+    <!-- <br><br> -->
     
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-4">Qualitative Comparison</h3>
-        <img src="./static/images/SR/fig5.png" alt="Qualitative comparison of image Super-Resolution results on various datasets." style="max-width: 100%; height: auto;">
+        <!-- <img src="./static/images/SR/fig5.png" alt="Qualitative comparison of image Super-Resolution results on various datasets." style="max-width: 100%; height: auto;"> -->
+        <img src="./static/images/SR/fig_SM.png" alt="Qualitative comparison of image Super-Resolution results on various datasets." style="max-width: 100%; height: auto;">
         <div class="content has-text-justified">
-          <p>
-            Qualitative comparisons demonstrate that our method consistently achieves superior restoration accuracy and semantic consistency compared to state-of-the-art one-step diffusion methods.
-          </p>
+          <!-- <p> -->
+            <br>
+            Fig. 3 Qualitative comparisons demonstrate that our method consistently achieves superior restoration quality compared to state-of-the-art one-step diffusion methods.
+          <!-- </p> -->
         </div>
       </div>
     </div>
@@ -213,7 +217,13 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-      </div>
+    <pre><code>@article{wu2025realism,
+  title={Realism Control One-step Diffusion for Real-World Image Super-Resolution},
+  author={Wu, Zongliang and Zheng, Siming and Jiang, Peng-Tao and Yuan, Xin},
+  journal={arXiv preprint arXiv:2509.10122},
+  year={2025}
+}</code></pre>
+  </div>
 </section>
 
 
